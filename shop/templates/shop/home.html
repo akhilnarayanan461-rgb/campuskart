@@ -1,0 +1,44 @@
+   <html>
+      <head>
+  <style>
+       .card{
+          
+         padding: 10px;
+         border: 1px solid black;
+         background-color: rgb(220, 203, 14);
+         color: crimson;
+         width: 100px;
+         margin: 10px;
+       
+        
+         
+
+      }
+      .row{
+         display:flex;
+      }
+     
+         </style>
+
+
+      </head>
+      <body>
+      <div class="row">
+  
+      {% for p in products %}
+     <div class="card">
+       {{p.name}}
+         {{p.price}}
+      <a href="/shop/products/{{p.id}}/">{{p.name}}</a>
+         </div>
+         
+
+
+     
+         
+      {% endfor %}
+      </div>
+</body>
+  </html>
+   
+
