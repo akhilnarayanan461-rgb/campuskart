@@ -9,3 +9,6 @@ def about(request):
 def product_deatils(request,id):
     product=Product.objects.get(id=id)
     return render (request,"shop/product_deatils.html",{"product":product})
+def cheap_products(request):
+    product=Product.objects.filter(price__lt=30)
+    return render (request,"shop/cheap_products.html")
